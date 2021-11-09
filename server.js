@@ -9,16 +9,16 @@ app.set("view engine", "ejs");
 
 app.set("views", path.join(__dirname, "views"));
 
-
+let frutas = 
+[{Fruta:"Manzana", Tipo: "Fruta", Stock: "true"}, 
+{Fruta: "Banana", Tipo: "Fruta", Stock:"true"},
+{Fruta: "Pera", Tipo: "Fruta", Stock:"False"}];
 
 app.get("/", (req, res) => {
 
-    res.render('File');
+    res.render('prueba');
 });
-app.get("/hola", (req, res) => {
 
-    res.render("Hello Word!");
-});
 
 app.listen(port, () => {
     console.log(`El puerto es  http://localhost:${port}`);
