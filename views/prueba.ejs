@@ -11,7 +11,7 @@
             crossorigin="anonymous"
         />
 
-        <title>Verduleria</title>
+        <title>Hello, world!</title>
     </head>
     <body>
         <header>
@@ -102,32 +102,27 @@
                     </div>
                 </div>
             </section>
+
             <div class="album py-5 bg-light">
                 <div class="container">
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                        <div class="col">
+                    <div class="row">
+                        <br>
+                    <% for (let i =0; i < largo;  i++ ) { %>
+                        <div class="col-4">
                             <div class="card shadow-sm">
-                                <img src="img/manzana.jpg" alt="">
-
+                                <img src=<%=frutas[i].Ruta%> width = "300" height = "200">
                                 <div class="card-body">
                                     <p class="card-text">
-                                        <h4>Manzana</h4>
+                                        <h4><%=frutas[i].Fruta%></h4> 
                                     </p>
                                     <p class="card-text">
                                         La Manzana mas rica y nutritiba, 
                                         compralo para esatr mas sano
                                     </p>
-                                    <div
-                                        class="
-                                            d-flex
-                                            justify-content-between
-                                            align-items-center
-                                        "
-                                    >
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <% } %>
                     </div>
                 </div>
             </div>
