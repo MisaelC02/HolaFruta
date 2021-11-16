@@ -10,7 +10,7 @@
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossorigin="anonymous"
         />
-
+        <link rel="stylesheet" href="css/mystile.css">
         <title>Hello, world!</title>
     </head>
     <body>
@@ -103,36 +103,31 @@
                 </div>
             </section>
 
-            <div class="album py-5 bg-light">
-                <div class="container">
+
                     <div class="row">
                     <% for (let i =0; i < largo;  i++ ) { %>
                         <div class="col-4">
-                            <div class="card shadow-sm">
+                            <div class="card shadow-sm  SePara">
                                 <img src=<%=frutas[i].Ruta%> width = "300" height = "200">
                                 <div class="card-body">
                                     <p class="card-text">
                                         <h4><%=frutas[i].Fruta%></h4> 
-                                    </p>
-                                    <!-- <%if(frutas[i].Stock == true){%>
-                                        <h4><%=Hay Stock%></h4>
-                                    <% } %> 
-                                    <%if(frutas[i].Stock == false){%>
-                                        <h4><%=No Hay Stock%></h4>
-                                    <% } %>-->
+                                    </p>   
                                     <p class="card-text">
                                         La Manzana mas rica y nutritiba, 
                                         compralo para esatr mas sano
                                     </p>
+                                    <% if(frutas[i].Stock == "true"){ %>
+                                        <h4>Hay Stock</h4>
+                                    <% } else{ %>  
+                                        <h4>No Hay Stock</h4>
+                                    <% } %>
                                 </div>
                             </div>
                         </div>
                     <% } %>
-                    </div>
                 </div>
-            </div>
         </main>
-
         <footer class="text-muted py-5">
             <div class="container">
                 <p class="float-end mb-1">
